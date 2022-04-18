@@ -19,3 +19,7 @@ body {
 a {
   color: #000000;
 }
+
+footer {
+  border-top: 5px solid black;
+}

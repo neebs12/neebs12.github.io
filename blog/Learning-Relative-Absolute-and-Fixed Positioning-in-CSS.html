@@ -9,20 +9,20 @@
   <body>
     <main>
       <h1>Learning Relative, Absolute and Fixed Positioning in CSS</h1>
-        <p>Feel free to <a href="/public/Learning-Relative-Absolute-and-Fixed Positioning-in-CSS-material.md">copy the code here</a>. It should display this:</p>
+        <p>If you want to follow along - feel free to copy the code from <a href="/public/Learning-Relative-Absolute-and-Fixed Positioning-in-CSS-material.md">the text file here</a>. It should display this:</p>
         <img src="/images/positioning-image1.png" alt="first image">
       
         <h2 id="background">Background</h2>
-        <p>Elements in the page are displayed according to the <em>CSS Flow Layout</em>. </p>
+        <p>Before we jump in to positioning, we need some context. When we display elements on the page, they are displayed according to the <em>CSS Flow Layout</em>. MDN tells us: </p>
         <blockquote>
         <p>The flow is essentially a set of things that are all working together and know about each other in your layout. - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout">MDN</a> </p>
         </blockquote>
 
         <p><em>Wait, what does this mean?</em><br>
-        Imagine you're in a conga line, people are added, they all know <em>exactly</em> where to go because each person is simply being held by another. Now imagine that each person is an element and the line is the flow layout! Here, each element communicates with each other to determine where each other's place are. </p>
+        Imagine you're in a conga line in hawaii beach. As people are added, they all know <em>exactly</em> where to go because each person is simply being held by another. Now imagine that each person is an element and the line is the flow layout! Here, each element communicates with each other to determine where each other's place are.</p>
 
         <h2>Static Positioning</h2>
-        <p>In CSS, this type of default positioning is called <em>static positioning</em>. The elements know where to go because for the natural flow layout of the 'conga line'. Syntatically, this is expressed by either NOT stating a property value for position, or having <code>static</code> as the property value.</p>
+        <p>In CSS, we can think of elements naturally falling in to place as a kind of default positioning - aka <em>static positioning</em>. The elements know where to go because for the natural flow layout of the 'conga line'. Syntatically, this is expressed by either NOT stating a property value for position, or having <code>static</code> as the property value.</p>
         
         <pre><code>
 ```css
@@ -32,7 +32,7 @@
         </code></pre>
 
         <h2>Relative Positioning</h2>
-        <p>Let us now say that the second person on the line wants to move without wrecking the conga line? This is where <em>relative positioning</em> comes in. Here we change the declarations of the <code>.second</code> selector by adding the <code>relative</code> value to the <code>position</code> property. We also change <code>top</code> and <code>left</code> to shift the element.</p>
+        <p>Let us now say that the second person on the line wants to move without wrecking the conga line? This is where <em>relative positioning</em> comes in. Here we change the declarations of the <code>.second</code> selector by adding the <code>relative</code> value to the <code>position</code> property. We also change <code>top</code> and <code>left</code> to express a shift on the element.</p>
         <pre><code>
 ```css
 .second {
@@ -48,7 +48,7 @@
         <p>We can see that the primary order of the elements are not changed even if the second element has visually shifted. The conga line is preserved! Huzza!</p>
 
         <h2>Absolute Positioning</h2>
-        <p>What if the second person now feels a bit uncomfortable being in the conga line for too long. This person then gets out of the line and everyone in front shifts accordingly to make up for the missing person - the line becomes shorter! To make this possible in CSS, we use <em>absolute positioning</em>. Here we change the declarations of the <code>.second</code> selector by adding the <code>absolute</code>.</p>
+        <p>What if the second person now feels a bit uncomfortable being in the conga line and wants to bail. This person then gets out of the line and everyone in front shifts accordingly to make up for the missing person - the line becomes shorter! To make this possible in CSS, we use <em>absolute positioning</em>. Here we change the declarations of the <code>.second</code> selector by adding the <code>absolute</code>.</p>
         
        <pre><code>
 ```css
@@ -63,10 +63,16 @@
        <img src="/images/positioning-image-3.png" alt="third image">
 
        <p>What we can now see is that the second element is <em>taken out of the flow</em>. This then changes the flow layout, thus affecting the positioning of every other element down stream of that flow. The conga line is now shorter :( </p>
-       <p>What actually happens here is that the second element stays shifted, but it now does so <em>relative to the positioning of the parent element</em>. </p>
+       <p>We can see here that the second element stays shifted due to the existing <code>top</code> and <code>left</code> rules, but it now does so <em>relative to the positioning of the parent element</em>. </p>
 
        <h2>Fixed Positioning</h2>
-       <p> This is more straight forward. Fixed positioning are elements positioned according to the view port and not the page. This means that the elements stay in the same place as you scroll down a page. When you scroll down a page - elements appear to change position until they are out of the view port! This is not the case for fixed elements where they stay in one place. Commonly applied to naviation bars. </p>
+       <p> This is more straight forward. Fixed positioning are elements positioned according to the view port and not the page. Thus the elements stay in the same place as you scroll down a page.</p>
+       
+       <em>What does this mean?</em>
+       <p>Basically, elements which are not fixed change position in a page as you scroll. Infact, they disappear when they are out of the view port view port! This is not the case for fixed elements where they stay in one place <em>no matter what</em></p>
+
+       <em>What is it used for?</em>
+       <p>Very useful for elements that we never want to disappear from view no matter where the user is in the page. This might include navigation bars and scroll bars. Or maybe elements that could contain ads if you want to be annoying >:)</p>
     </main>
     <footer>
       Made by Jason Aricheta

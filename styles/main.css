@@ -1,12 +1,12 @@
-/* centering ever */
-body {
-  margin: auto;
-  width: 800px;
+:root {
+  font-family: 'Akshar', sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: #282C34;
 }
 
 #banner {
   width: 100%;
-  height: 100px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -16,10 +16,51 @@ body {
   border-radius: 30px;
 }
 
+.code {
+  background-color: #24272e;
+}
+
+/* centering everything */
+body {
+  margin: auto;
+  width: 700px;
+  color: #c3c3c5;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 650;
+  border-bottom: 2px solid #444953;
+  color: #d8d8da;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 612;
+  border-bottom: 0.25px solid #444953;
+  color: #d8d8da;
+}
+
+h3 {
+  font-size: 1.11em;
+  font-weight: 650;
+  color: #d8d8da;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 a {
-  color: #000000;
+  color: #5DBEFF;
 }
 
 footer {
-  border-top: 5px solid black;
+  border-top: 5px solid #c3c3c5;
+}
+
+em {
+  color: #A8C373;
 }

@@ -16,8 +16,12 @@
   border-radius: 30px;
 }
 
-.code {
+code {
   background-color: #24272e;
+}
+
+pre {
+  background-color: #24272e;  
 }
 
 /* centering everything */
@@ -63,4 +67,8 @@ footer {
 
 em {
   color: #A8C373;
+}
+
+strong {
+  color: #3CA0E4;
 }

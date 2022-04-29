@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning Plan</title>
+    <meta charset="UTF-8">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+    <script src="../scripts/JavaScript-Fundamentals.js"></script>
+  </head>
+  
+  <body>
+    <main>
+      <img src="/images/JavaScript-Fundamentals-Banner.PNG" alt="Banner" id="banner">
+      <h1>JavaScript Fundamentals</h1>
+      
+      <p>This blog post will lightly touch on the following topics:</p>
+      <ol>
+        <li>JavaScript with HTML and CSS</li>
+        <li>Control Flow and Loops</li>
+        <li>DOM and Interactions</li>
+        <li>Arrays and Objects</li>
+        <li>Keeping your code DRY with Functions</li>
+      </ol>  
+
+      <h2>JavaScript with HTML and CSS</h2>
+      As background, the primary responsibility of HTML is to provide the structure for the content whereas the CSS is used to make the content presentable. <em>Where does JavaScript come in to this</em>? Great question! See below to find out:
+
+      <p>Help Daniel decide how cool he wants to be today! Toggle between the options below and help a brother out!</p>
+
+      <div id="first-example">First Example</div>
+
+      <p>See how cool this is? This would not have been possible without JavaScript! It allows us to be interactive with our webpages. Now your blog not only looks nice, but it now has <em>life</em> because of JavaScript!</p>
+
+      <h2>Control Flow and Loops</h2>
+      <p><em>Control Flow</em> are essentially switches. It allows us to dictate what certain set of commands are executed by the program based on certain inputs. In JavaScript, this is represented by the <code>if..else</code> construct! For more complicated flows, this construct expands with additional <code>else if</code>. How do you think we are able to toggle between various coolness of Daniel? With flow control of course! See below: </p>
+
+<pre>
+
+<code class="lang-javascript"><span class="hljs-keyword">if</span> (<span class="hljs-keyword">input</span> === <span class="hljs-string">'cool'</span>) {
+  <span class="hljs-comment">/*cool code*/</span>
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">input</span> === <span class="hljs-string">'cooler'</span>) {
+  <span class="hljs-comment">/*cooler code*/</span>
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-comment">/*coolest code*/</span>  
+}
+</code>
+</pre>
+      
+      <p>If control flow controls which sets of commands are executed, <em>Loops</em> gives us the opportunity to repeat those commands as much (or as little) as we like! In JavaScript, this takes the form of <code>for loops</code> and <code>while loops</code>. These too have variants such as <code>for..of</code> and <code>do..while</code> but the idea is the same!</p>
+
+      <p>See interaction below for how many times we should display &#39;Hello World!&#39;. As you change through different numbers, I have an internal <code>for</code> loop which dictates how many times Hello World is displayed!</p>
+
+      <div id="second-example"></div>
+
+      <h2>DOM and Interactions</h2>
+      <p>The DOM (Document Object Model) is essentially the representation of the HTML within JavaScript</p>
+
+      <p><em>That doesn&#39;t quite answer my question - what really is this &#39;DOM&#39;?</em> Well, when the browser gets the HTML from the server, the structure of the HTML needs to be represented within the program. As you know, the HTML can be huge and complex and so representing complexity within JavaScript cannot be done by simple (primitive) data types like numbers of strings - we need to use an <strong>Object</strong> to <strong>Model</strong> the HTML <strong>Document</strong> within the program, thus the <strong>DOM</strong>. </p>
+
+      <p>With a large and complex object that is the DOM, sometimes we would need to interact with it within the program. A basic example trying to find how many elements there are within the DOM that matches a <em>selector</em>. <em>Our example will try to query the DOM of this webpage itself!</em> Go hard!</p>
+
+      <p>See example below!</p>
+      <div id="third-example"></div>
+
+      <h2>Arrays and Objects</h2>
+      <p>To the simplest degree, arrays are data structures defined with square brackets: <code>[]</code> whereas objects are defined with curly brackets: <code>{}</code>.</p>
+      <p>However, in essence, arrays are also objects. The only difference is that arrays are objects which have <em>non-negative integer properties</em> and have a length property. Objects however are more &#39;general&#39;. They aren&#39;t restricted to non-negative integers for property names and they do not have to have the length property. </p>
+      <p>See the effect of using the <code>typeof</code> keyword on certain JavaScript data-types below:</p>
+
+<pre>
+  
+<code class="lang-javascript"><span class="hljs-keyword">typeof</span> <span class="hljs-number">1.0</span>;     <span class="hljs-comment">// 'number'</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-string">'hello'</span>; <span class="hljs-comment">// 'string'</span>
+<span class="hljs-keyword">typeof</span> [];      <span class="hljs-comment">// 'object'</span>
+<span class="hljs-keyword">typeof</span> {};      <span class="hljs-comment">// 'object'</span>
+</code>
+</pre>
+
+      <h2>Keeping your code DRY with Functions</h2>
+      <p>Functions  allow us to package groups of commands in our program and execute them anywhere. There is no restriction as to how long a function can be, so there is no restriction as to how many commands you can effectively group together! In programming, functions are central to the DRY principle - <em>Dont Repeat Yourself</em>.</p>
+      <p>The <em>ideal</em> functions are ones that:</p>
+
+      <ol>
+        <li>Has a single and focused purpose. </li>
+        <li>Have descriptive names.</li>
+        <li>Are short and simple.</li>
+      </ol>
+      
+      <p>Functions in JavaScript can be defined in a multitude of ways, however the most common way is via <em>function declarations</em>. Where the <code>function</code> keyword is the first keyword in a statement, followed by the function name.</p>
+
+<pre>
+
+<code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span><span class="hljs-params">(<span class="hljs-comment">/*parameters*/</span>)</span> </span>{
+<span class="hljs-comment">  /*function body*/</span>
+}
+</code>
+</pre>
+
+    </main>
+    <footer>
+      Made by Jason Aricheta
+      <a href="#">Get in touch!</a>
+    </footer>
+  </body>
+</html>

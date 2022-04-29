@@ -22,10 +22,7 @@ function firstExampleHandler(event) {
 
 // work on second example
 function secondExampleHandler(event) {
-  if (!img) {
-    alert("Please select a Daniel before toggling for this example!")
-    return;
-  }
+  if (!img) return alert("Please select a Daniel first!")
 
   // first, remove all children of secondExample except for the fieldset
   let tmp = secondExample.lastElementChild;
@@ -35,18 +32,47 @@ function secondExampleHandler(event) {
   }
 
   let val = event.target.value;
-  // img is the current element
-  // we clone it, 
-  // at this part of the code, img is a valid HTMLIMGElement object
+  // img is the current element - is cloned
   for (let i = 0; i < val; i += 1) {
     let copyImg = img.cloneNode(false);
     secondExample.insertAdjacentElement("beforeend", copyImg);
   }
 }
 
+function thirdExampleHandler(event) {
+  event.preventDefault();
+
+  let val = event.target.querySelector('input').value.trim();
+
+  let tmp = thirdExample.lastElementChild;
+  if (tmp.tagName !== 'FIELDSET') tmp.remove();
+  
+  let h3 = document.createElement('h3');
+  thirdExample.insertAdjacentElement("beforeend", h3);
+
+  // creating text node for sanitation
+  const applyText = txt => h3.appendChild(document.createTextNode(txt));
+
+  try {
+    let elms = document.querySelectorAll(val);
+    if (!elms.length) {
+      applyText(`This page has no elements matching your "${val}" selector.`)
+    } else if (elms.length === 1) {
+      applyText(`This page has 1 element matching your "${val}" selector`)
+    } else {
+      // plural
+      applyText(`This page has ${elms.length} elements matching your "${val}" selector`)
+    }
+  } catch {
+    // handling of invalid selector
+    applyText(`The "${val}" selector is invalid!`)
+  }
+}
+
 function registerHandlers() {
   firstExample.addEventListener('change', firstExampleHandler);
   secondExample.addEventListener('change', secondExampleHandler);
+  thirdExample.addEventListener('submit', thirdExampleHandler)
 }
 
 document.addEventListener('DOMContentLoaded', event => {

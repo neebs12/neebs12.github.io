@@ -76,8 +76,25 @@
 
       <p>With a large and complex object that is the DOM, sometimes we would need to interact with it within the program. A basic example trying to find how many elements there are within the DOM that matches a <em>selector</em>. <em>Our example will try to query the DOM of this webpage itself!</em> Go hard!</p>
 
-      <p>See example below!</p>
-      <div id="third-example">Third Example</div>
+      <p>See example below! Hint try some of the examples below:</p>
+      <ul>
+        <li><em>p em</em></li>
+        <li><em>#banner</em></li>
+        <li><em>input[type="radio"]</em></li>
+        <li><em>img.daniel</em> - create daniel images first!</li>
+        <li>Explore all valid selectors here: <a href="https://www.w3schools.com/cssref/css_selectors.asp">w3schools</a></li>
+      </ul>
+
+      <div id="third-example">
+        <fieldset>
+          <legend>Enter a <em>valid selector</em> here</legend>
+          <form id="form">
+            <label for="selector-example">document.querySelectorAll: </label>
+            <input type="text" id="selector-example" placeholder="selector argument">
+            <button type="submit">Execute!</button>
+          </form>
+        </fieldset>
+      </div>
 
       <h2>Arrays and Objects</h2>
       <p>To the simplest degree, arrays are data structures defined with square brackets: <code>[]</code> whereas objects are defined with curly brackets: <code>{}</code>.</p>

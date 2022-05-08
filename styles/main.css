@@ -1,6 +1,6 @@
 :root {
-  font-family: 'Akshar', sans-serif;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
+  font-family: 'Calibri', sans-serif;
   background-color: #282C34;
 }
 
@@ -72,4 +72,12 @@ em {
 
 strong {
   color: #3CA0E4;
+}
+
+.lang-javascript .hljs-meta {
+  color: #a1a1a0;
+}
+
+.lang-javascript .hljs-literal {
+  color: #73bbb2;
 }

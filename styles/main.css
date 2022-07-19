@@ -4,6 +4,21 @@
   background-color: #282C34;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-family: 'Calibri', sans-serif;
+    background-color: olive;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-family: 'Calibri', sans-serif;
+    background-color: greenyellow;
+  }
+}
+
+
 #banner {
   width: 100%;
   height: 200px;

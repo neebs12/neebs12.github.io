@@ -35,10 +35,8 @@ window.addEventListener("load", () => {
   const fourthProj = document.getElementById("fourth-project");
   // get project headline
   const projHeadline = document.getElementById("top-project-headline");
-
   // get the main proj background div
   const mainProjBg = document.getElementById("main-proj-background");
-
   // get footer div
   const footer = document.getElementById("footer");
 

@@ -1,3 +1,9 @@
+# delete existing index.html
+rm ./index.html
+
+# delete existing assets folder
+rm -rf ./assets
+
 # from: ~/personal-website root of project
 
 cd ./src

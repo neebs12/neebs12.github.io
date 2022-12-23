@@ -42,6 +42,24 @@ window.addEventListener("load", () => {
   // get footer div
   const footer = document.getElementById("footer");
 
+  // gradient callback
+  const asgGradientClasses = (elm, from, via, to) => {
+    elm.classList = "";
+
+    if (to) {
+      // third color provided
+      elm.classList.add("bg-gradient-to-r");
+      elm.classList.add("from-" + from);
+      elm.classList.add("via-" + via);
+      elm.classList.add("to-" + to);
+    } else {
+      // no third color provided
+      elm.classList.add("bg-gradient-to-r");
+      elm.classList.add("from-" + from);
+      elm.classList.add("to-" + via);
+    }
+  };
+
   const revertToLargeClasses = () => {
     // show this large image
     logoImgLarge.classList.remove("hidden");
@@ -73,14 +91,18 @@ window.addEventListener("load", () => {
     grandParentElm.classList.add("lg:p-0");
 
     // for main proj and footer background, revert classes to "bg-gradient-to-r from-darkbluetheme via-lightbluetheme to-darkbluetheme"
-    [mainProjBg, footer].forEach((elm) => {
-      elm.classList = "";
-
-      elm.classList.add("bg-gradient-to-r");
-      elm.classList.add("from-darkbluetheme");
-      elm.classList.add("via-lightbluetheme");
-      elm.classList.add("to-darkbluetheme");
-    });
+    asgGradientClasses(
+      mainProjBg,
+      "darkbluetheme",
+      "lightbluetheme",
+      "darkbluetheme"
+    );
+    asgGradientClasses(
+      footer,
+      "lightbluetheme",
+      "darkbluetheme",
+      "lightbluetheme"
+    );
   };
 
   const revertToSmallClasses = () => {
@@ -114,14 +136,9 @@ window.addEventListener("load", () => {
     // grandParentElm.classList.add("drop-shadow-2xl");
     grandParentElm.classList.add("rounded-3xl");
 
-    // for main proj background, revert classes to "bg-gradient-to-r from-darkbluetheme to-lightbluetheme"
-    [mainProjBg, footer].forEach((elm) => {
-      elm.classList = "";
-
-      elm.classList.add("bg-gradient-to-r");
-      elm.classList.add("from-darkbluetheme");
-      elm.classList.add("to-lightbluetheme");
-    });
+    // for main proj and footer background, revert classes to "bg-gradient-to-r from-darkbluetheme via-lightbluetheme to-darkbluetheme"
+    asgGradientClasses(mainProjBg, "darkbluetheme", "lightbluetheme");
+    asgGradientClasses(footer, "lightbluetheme", "darkbluetheme");
   };
 
   // condition img for width < 1024px

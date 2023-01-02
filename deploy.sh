@@ -17,6 +17,9 @@ cd ..
 # copy contents of dist folder to root of project
 cp -r ./src/dist/* ./
 
+# specific copy of resume
+cp ./src/assets/Jason_Aricheta_Resume.pdf ./assets 
+
 # git add
 git add -A
 
